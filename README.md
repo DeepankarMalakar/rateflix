@@ -18,26 +18,22 @@ It includes:
 - Blade templates
 - Vanilla CSS/JS (ported from your original app)
 
-## Project Path
-
-`C:\xampp\htdocs\rateflix-laravel`
-
 ## Database
 
-Default `.env` values in this project are set to:
+Configure your own `.env` database values (example):
 
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=rateflix_laravel_db
-DB_USERNAME=root
-DB_PASSWORD=
+DB_DATABASE=your_database_name
+DB_USERNAME=your_db_user
+DB_PASSWORD=your_db_password
 ```
 
 ## Quick Start
 
-From `C:\xampp\htdocs\rateflix-laravel`:
+From the project root:
 
 ```bash
 php artisan migrate:fresh --seed
@@ -52,6 +48,8 @@ Open:
 
 - Admin: `admin@rateflix.com` / `password`
 - User: `jane@example.com` / `password`
+
+Use demo credentials only for local development. Change/remove them for production.
 
 ## Main Features
 
@@ -85,6 +83,7 @@ TMDB_IMAGE_SIZE=w500
 ```
 
 If poster URL is left blank while creating/updating a movie, RateFlix tries TMDB lookup automatically.
+Never commit real API keys/tokens to git.
 
 ### Sync Posters for Existing Movies
 
