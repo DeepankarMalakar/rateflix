@@ -98,8 +98,3 @@ php artisan route:list
 php artisan optimize:clear
 php artisan db:seed
 ```
-
-## Notes
-
-- This Laravel app is separate from the older plain PHP app (`movie-review-app`).
-- It uses a separate database: `rateflix_laravel_db`.
