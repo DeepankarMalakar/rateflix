@@ -44,6 +44,72 @@ Open:
 
 `http://127.0.0.1:8000`
 
+## Run On Another System (No Deployment)
+
+If someone clones this project to a new local machine, follow these steps:
+
+1. Clone and enter project:
+
+```bash
+git clone https://github.com/DeepankarMalakar/rateflix.git
+cd rateflix
+```
+
+2. Install dependencies:
+
+```bash
+composer install
+```
+
+3. Create local env file:
+
+```bash
+cp .env.example .env
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+4. Set database values in `.env` (MySQL running):
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=rateflix_laravel_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+5. Generate app key:
+
+```bash
+php artisan key:generate
+```
+
+6. Run migrations and seed demo data:
+
+```bash
+php artisan migrate --seed
+```
+
+7. Start app:
+
+```bash
+php artisan serve
+```
+
+Open: `http://127.0.0.1:8000`
+
+If database/tables already exist on that machine, you can usually just run:
+
+```bash
+php artisan serve
+```
+
 ## Demo Credentials
 
 - Admin: `admin@rateflix.com` / `password`
